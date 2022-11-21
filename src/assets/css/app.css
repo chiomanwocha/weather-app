@@ -1,0 +1,77 @@
+.weather-app{
+    background-color: rgb(174, 174, 174);
+    transition: 1s;
+    width: 60vw;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    /* height: 500px; */
+}
+    .weather-header{
+        padding: 50px 20px;
+    }
+    .button-float{
+        display: flex;
+        justify-content: flex-end;
+        padding: 50px 50px 0 0
+    }
+    .construction{
+        width: 40vw;
+        margin: 0 auto;
+    }
+    .construction p {
+        margin-top: 30px 
+    }
+    .bold{
+        font-weight: 900;
+    }
+    .weather-description{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px
+    }
+    .weather-description>div{
+        padding: 0 10px;
+    }
+    .weather-description>div:not(:last-child){
+        border-right: 1px solid black
+    }
+    h2{
+        margin-bottom: 0;
+    }
+    div>p{
+        margin: 0
+    }
+    button{
+    border-radius: 5px;
+    padding: 15px;
+    border: none;
+    font-weight: 700;
+    box-shadow: 0 0 5px grey;
+    cursor: pointer;
+  }
+  button:hover{
+    color: white;
+    background-color: #C53F3E;
+    transition: .3s;
+  }
+  a{
+    text-decoration: none;
+  }
+  input{
+    width: 25vw;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, .5);
+    border: 1px solid white;
+    outline: none;
+    border-radius: 3px;
+  }
+  .search > button {
+    padding: 12px;
+    margin-left: 10px;
+    box-shadow: none;
+  }
+  .icon{
+    font-size: 102px;
+  }
