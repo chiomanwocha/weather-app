@@ -111,7 +111,6 @@ import { Icon } from '@iconify/vue';
                     this.location = response.data.name
                     this.abbr = response.data.sys.country
                     this.query = ''
-                    console.log(response)
                 })
                 .catch(error => {
                     this.error = true
