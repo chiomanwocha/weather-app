@@ -17,7 +17,8 @@
         <p>Nothing to show yet ! search for a location ..</p>
         <img src="../assets/Breaking-barriers-pana.svg" alt="construction">
     </div>
-    <div class="weather-body" v-if="res">
+    <div class="lds-default" v-if="loading"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    <div class="weather-body" v-if="res && !loading">
         <h1>{{location}}, {{abbr}}</h1>
         <Icon class="icon" icon="carbon:partly-cloudy" v-if="clouds"/>
         <Icon class="icon" icon="material-symbols:rainy-outline" v-if="rain"/>
@@ -78,13 +79,16 @@ import { Icon } from '@iconify/vue';
             rain: false,
             snow: false,
             thunderstorm: false,
-            drizzle: false
+            drizzle: false,
+            loading: false
             }
         },
         methods: {
             searchWeather(){
+                this.loading = true
                 axios.get(`${this.url}/weather?q=${this.query}&appid=${this.apiKey}&units=imperial`)
                 .then(response => {
+                    this.loading = false
                     this.res = true
                     this.error = false
                     this.clouds = false
