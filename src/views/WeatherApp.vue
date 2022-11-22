@@ -13,7 +13,7 @@
             <button @click="searchWeather">Search</button>
         </div>
     </div>
-    <div class="construction" v-if="!res">
+    <div class="construction" v-if="!res && !loading">
         <p>Nothing to show yet ! search for a location ..</p>
         <img src="../assets/Breaking-barriers-pana.svg" alt="construction">
     </div>
