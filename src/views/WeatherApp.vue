@@ -58,8 +58,8 @@ import { Icon } from '@iconify/vue';
 	},
         data(){
             return{
-            apiKey: '23839af1e1bec88f56e49b93562ffea0',
-            url: 'http://api.openweathermap.org/data/2.5',
+            apiKey: process.env.VUE_APP_APIKEY,
+            url: process.env.VUE_APP_URL,
             query: '',
             weather: {},
             error: false,
@@ -83,7 +83,7 @@ import { Icon } from '@iconify/vue';
         },
         methods: {
             searchWeather(){
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.query}&appid=${this.apiKey}&units=imperial`)
+                axios.get(`${this.url}/weather?q=${this.query}&appid=${this.apiKey}&units=imperial`)
                 .then(response => {
                     this.res = true
                     this.error = false
