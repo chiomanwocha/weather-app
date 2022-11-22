@@ -87,6 +87,11 @@ import { Icon } from '@iconify/vue';
                 .then(response => {
                     this.res = true
                     this.error = false
+                    this.clouds = false
+                    this.rain = false
+                    this.snow = false
+                    this.thunderstorm = false
+                    this.drizzle = false
                     this.weather = response.data
                     this.weatherType = response.data.weather[0].main
                     if (this.weatherType == 'Clouds' || this.weatherType == 'Atmosphere' || this.weatherType == 'Clear'){
